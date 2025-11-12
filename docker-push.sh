@@ -10,8 +10,8 @@ echo "Pushing VGGT Docker image to GitHub Container Registry"
 echo "Image: ${IMAGE_NAME}:${VERSION}"
 echo ""
 
-# Check if logged in to ghcr.io
-if ! docker info 2>/dev/null | grep -q "ghcr.io"; then
+# Check if logged in to ghcr.io by checking docker config
+if ! grep -q "ghcr.io" ~/.docker/config.json 2>/dev/null; then
     echo "⚠ Not logged in to GitHub Container Registry"
     echo ""
     echo "Please login first:"
