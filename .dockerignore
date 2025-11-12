@@ -1,0 +1,43 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+*.egg-info/
+dist/
+build/
+
+# Pixi local environment (will be rebuilt in Docker)
+.pixi/
+
+# Examples directory (large, not needed in container)
+examples/
+
+# Git
+.git/
+.gitignore
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# Documentation
+*.md
+!README.md
+
+# Generated files
+input_images_*/
+*.glb
+*.npz
+
+# Logs
+*.log
+
+# Temporary files
+tmp/
+temp/
+

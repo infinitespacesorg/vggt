@@ -29,7 +29,7 @@ pip install -e .
 2. Then run:
 
 ```bash
-pixi run -e python demo_gradio.py
+pixi run -e demo python demo_gradio.py
 ```
 
 ### Install and run with uv

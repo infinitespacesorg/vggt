@@ -1,0 +1,30 @@
+version: '3.8'
+
+services:
+  vggt:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    image: ghcr.io/infinitespacesorg/vggt:latest
+    container_name: vggt-demo
+    ports:
+      - "7860:7860"
+    # Enable GPU support (requires nvidia-docker)
+    deploy:
+      resources:
+        reservations:
+          devices:
+            - driver: nvidia
+              count: all
+              capabilities: [gpu]
+    # Alternative for older docker-compose versions:
+    # runtime: nvidia
+    environment:
+      - NVIDIA_VISIBLE_DEVICES=all
+    volumes:
+      # Optional: mount a directory for persistent output files
+      - ./outputs:/app/outputs
+    restart: unless-stopped
+    # Override command to enable public sharing if needed
+    # command: python demo_gradio.py
+

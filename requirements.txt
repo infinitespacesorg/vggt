@@ -1,7 +1,12 @@
-torch==2.3.1
-torchvision==0.18.1
-numpy==1.26.1
+torch==2.6.0
+torchvision==0.21.0
+numpy>=2.0.0
+opencv-python
+gradio
+matplotlib
+scipy
 Pillow
 huggingface_hub
 einops
 safetensors
+trimesh
