@@ -1,16 +1,3 @@
-<<<<<<< HEAD
-gradio==5.17.1
-viser==0.2.23
-tqdm
-hydra-core
-omegaconf
-opencv-python
-scipy
-onnxruntime
-requests
-trimesh
-matplotlib
-=======
 gradio==5.17.1
 viser==0.2.23
 tqdm
@@ -27,5 +14,3 @@ pydantic==2.10.6
 pycolmap==3.10.0
 pyceres==2.3
 git+https://github.com/jytime/LightGlue.git#egg=lightglue
-
->>>>>>> 44b3afbd1869d8bde4894dd8ea1e293112dd5eba
